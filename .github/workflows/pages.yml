@@ -20,7 +20,7 @@ jobs:
     - name: Generate Pages
       run: |
         sed -i "/FREEZE_FOLDER = /c\FREEZE_FOLDER = $(pwd)/public" estatico/config.cfg
-      cat estatico/config.cfg
+        cat estatico/config.cfg
         make pages
     - name: Deploy to GitHub Pages
       if: success()
